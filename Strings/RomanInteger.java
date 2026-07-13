@@ -1,4 +1,6 @@
 
+import java.util.*;
+
 class RomanInteger {
 
     public int romanToInt(String s) {
@@ -20,8 +22,8 @@ class RomanInteger {
             int curr = map.get(s.charAt(i));
 
             if (i < s.length() - 1 && curr < map.get(s.charAt(i + 1))) {
-                ans -= curr; 
-            }else {
+                ans -= curr;
+            } else {
                 ans += curr;
             }
         }
